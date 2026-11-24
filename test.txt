@@ -1,0 +1,33 @@
+1. 최신 main 브랜치를 이용해서 새 브랜치 생성 + 이동 $ git switch -c docs/test
+
+2. test.txt 파일 생성 후 내용 작성
+
+3. 스테이징 영역 -> 로컬 레파지토리에 추가
+$ git add test.txt
+$ git commit -m "test.txt 작성"
+
+4. 로컬 커밋 내역을 원격(Github)에 같은 브랜치에 밀어넣기
+$ git push -u origin docs/test
+
+5. Github로 이동
+
+6. docs/test 브랜치로 변경 -> test.txt push 확인
+
+7. 상단 탭 -> Pull Requests -> New Pull Request 버튼
+
+8. base: main   /  compare: docs/test  선택 후
+  Create Pull Request
+
+9. PR 화면으로 변경되면 아래로 스크롤
+ -> Merge pull request 클릭하여 병합 진행
+
+10. Local로 이동
+
+11. 로컬 브랜치를 main으로 변경
+$ git switch main
+
+12. 원격 main의 커밋 내역을 끌고와서 병합(Pull)
+$ git pull origin main
+
+13. 로컬 main의 로그 확인
+$ git log
